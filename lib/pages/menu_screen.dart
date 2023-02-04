@@ -5,6 +5,8 @@ import 'package:projeto_aula_3/pages/dice_screen.dart';
 import 'package:projeto_aula_3/pages/home_page.dart';
 import 'package:projeto_aula_3/widget/button_spaced.dart';
 
+import '../quiz/quiz_screen.dart';
+
 class MenuScreen extends StatelessWidget {
   static const String id = '/menu_screen';
 
@@ -21,7 +23,7 @@ class MenuScreen extends StatelessWidget {
           children: [
             Text(
               'Menu inicial',
-              style: TextStyle(fontSize: 26),
+              style: TextStyle(fontSize: 42),
             ),
             SizedBox(
               height: 8,
@@ -31,8 +33,9 @@ class MenuScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  ButtonSpaced(title: 'Cartão Pessoal', route: MyHomePage.id),
-                  ButtonSpaced(title: 'Jogar dados', route: DiceScreen.id),
+                  ButtonSpaced(title: 'Cartão Pessoal', route: MyHomePage.id, buttonColor: Colors.teal),
+                  ButtonSpaced(title: 'Jogar dados', route: DiceScreen.id, buttonColor: Colors.red),
+                  ButtonSpaced(title: 'Jogar questões', route: QuizScreen.id, buttonColor: Colors.blue,),
                 ],
               ),
             ),
